@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import propTypes from 'prop-types';
 import {signOut} from '../action/auth';
 import {View, Text, StyleSheet} from 'react-native';
+// import {} from 'react-native-vector-icons/dist/FontAwesome';
 
 const CustomHeader = ({signOut, authState, navigation}) => {
   return (
@@ -30,7 +31,7 @@ const styles = StyleSheet.create({
   Container: {
     width: '100%',
     height: 30,
-    backgroundColor: '#',
+    backgroundColor: '#53B175',
     color: 'white',
   },
 });
