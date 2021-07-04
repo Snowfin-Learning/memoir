@@ -1,12 +1,39 @@
 import React from 'react';
-import {StyleSheet, Text} from 'react-native';
 import {connect} from 'react-redux';
 import propTypes from 'prop-types';
 import {signOut} from '../action/auth';
+import {View, Text, StyleSheet} from 'react-native';
 
 const CustomHeader = ({signOut, authState, navigation}) => {
-  return <Text></Text>;
+  return (
+    <>
+      <View style={styles.Container}>
+        <View>
+          <Text>Memior Shop Owner</Text>
+        </View>
+        {authState.isAuthenticated && (
+          <View>
+            <View onPress={() => navigation.navigate('AddProduct')}>
+              <Text>Add Product</Text>
+            </View>
+            <View onPress={() => signOut()}>
+              <Text>Signout</Text>
+            </View>
+          </View>
+        )}
+      </View>
+    </>
+  );
 };
+
+const styles = StyleSheet.create({
+  Container: {
+    width: '100%',
+    height: 30,
+    backgroundColor: '#',
+    color: 'white',
+  },
+});
 
 const mapStateToProps = state => ({
   authState: state.auth,

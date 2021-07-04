@@ -1,12 +1,12 @@
 import React from 'react';
-import {StyleSheet, Text} from 'react-native';
-import {Container, Spinner} from 'native-base';
+import {StyleSheet, View, Text} from 'react-native';
+import * as Progress from 'react-native-progress';
 
 const EmptyContainer = () => {
   return (
-    <Container style={styles.emptyContainer}>
-      <Spinner />
-    </Container>
+    <View style={styles.emptyContainer}>
+      <Text>Wait for the app loads up</Text>
+    </View>
   );
 };
 
