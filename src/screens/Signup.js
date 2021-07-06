@@ -15,7 +15,7 @@ import {signUp} from '../action/auth';
 import {connect} from 'react-redux';
 import {Avatar, Text, Input} from 'react-native-elements';
 
-const Signup = ({signUp}) => {
+const Signup = ({signUp, navigation}) => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -176,6 +176,13 @@ const Signup = ({signUp}) => {
               <Text style={styles.buttonText}>SignUp</Text>
             </TouchableOpacity>
           </View>
+          <TouchableOpacity
+            onPress={() => navigation.navigate('Signin')}
+            style={{marginTop: 25, marginBottom: 30}}>
+            <Text style={{color: '#53B175', textAlign: 'center'}}>
+              Already have an account? SignIn Here
+            </Text>
+          </TouchableOpacity>
         </ScrollView>
       </View>
     </SafeAreaView>
