@@ -30,6 +30,8 @@ export const signUp = data => async dispatch => {
         .ref('/users/' + data.user.uid)
         .set({
           name,
+          email,
+          password,
           address,
           city,
           state,
