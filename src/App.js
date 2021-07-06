@@ -10,9 +10,7 @@ import Signup from './screens/Signup';
 import AllProducts from './screens/AllProducts';
 import CustomHeader from './layout/CustomHeader';
 import {SET_USER, IS_AUTHENTICATED} from './action/action.types';
-
 import database from '@react-native-firebase/database';
-
 import EmptyContainer from './components/EmptyContainer';
 import {requestPermission} from './utils/AskPermission';
 
@@ -72,8 +70,8 @@ const App = ({authState}) => {
             </>
           ) : (
             <>
-              <Stack.Screen name="Signin" component={Signin} />
               <Stack.Screen name="Signup" component={Signup} />
+              <Stack.Screen name="Signin" component={Signin} />
             </>
           )}
         </Stack.Navigator>
